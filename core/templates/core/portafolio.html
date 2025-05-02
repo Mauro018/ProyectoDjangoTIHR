@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} | ¡Oferta Exclusiva!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    {% block content %}{% endblock %}
+    
+{% block header %}
+
+    <header>
+        <h1>¡Gangazos!</h1>
+        <p class="subtitulo">Descuento especial por tiempo limitado.</p>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}">Sobre los Gangazos</a></li>
+                <li><a href="{% url 'portafolio' %}">Categorias en oferta</a></li>
+                <li><a href="{% url 'contact' %}">Contactenos</a></li>
+            </ul>
+        </nav>
+    </header>
