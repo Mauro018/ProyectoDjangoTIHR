@@ -7,6 +7,7 @@ html_base = """
     <li><a href="/about">Sobre los Gangazos</a></li>
     <li><a href="/portafolio">Categorias en oferta</a></li>
     <li><a href="/contact">Contactenos</a></li>
+    <li><a href="/productos">Productos</a></li>
 </ul>
 """
 
@@ -19,6 +20,9 @@ def about(request):
 
 def portafolio(request):
     return render(request,"core/portafolio.html")
+
+def productos(request):
+    return render(request,"core/productos.html")
 
 def contact(request):
     return render(request,"core/contact.html")

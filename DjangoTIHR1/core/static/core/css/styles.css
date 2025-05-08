@@ -11,7 +11,7 @@ body {
 
 header {
     background-color: #003366; /* Azul más oscuro */
-    color: #ffffff;
+    color: #000000;
     padding: 1rem;
     text-align: center;
     border-radius: 8px;
@@ -26,7 +26,7 @@ header h1 {
 
 nav {
     background-color: #004080; /* Un tono de azul intermedio */
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 0.5rem;
     text-align: center;
 }
@@ -45,7 +45,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
@@ -72,7 +72,7 @@ main {
 
 footer {
     background-color: #003366; /* Azul más oscuro */
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
@@ -103,12 +103,11 @@ li {
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
-li p::before {
-    content: '✔️';
-    position: absolute;
-    left: 0;
-    color: #4CAF50;
+p {
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }

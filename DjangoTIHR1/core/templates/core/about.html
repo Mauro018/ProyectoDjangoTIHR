@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} | ¡Oferta Exclusiva!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+{% block header %}
+
+    <header>
+        <h1>¡Gangazos!</h1>
+        <p class="subtitulo">Descuento especial por tiempo limitado.</p>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}">Sobre los Gangazos</a></li>
+                <li><a href="{% url 'portafolio' %}">Categorias en oferta</a></li>
+                <li><a href="{% url 'contact' %}">Contactenos</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+{% endblock %}
+
+{% block footer %}
+<section>
+    <div>
+        <h1>sobre los Gangazos</h1>
+
+            <p>Los gangazos son una oferta exclusiva que ofrecemos a los clientes un descuento especial por tiempo limitado. Este descuento se aplica a la oferta de productos de nuestra categorias, y se considera un beneficio exclusivo para los clientes que adquieren el producto durante un período de tiempo limitado.</p>
+            <p>Además, los gangazos se ofrecen con una garantía de satisfacción, lo que significa que los clientes pueden disfrutar de un descuento especial durante un período de tiempo limitado, sin que se les cobren los costos de la oferta.</p>
+            <p>En resumen, los gangazos son una oferta exclusiva que ofrece a los clientes un descuento especial por tiempo limitado, y se considera un beneficio exclusivo para los clientes.</p>
+
+    </div>
+</section>
+<section>
+    <div>
+        <h2>¡Actúa ahora!</h2>
+        <p>La oferta termina pronto. ¡No esperes más!</p>
+        <button><a href="{% url 'portafolio' %}">¡Gangazos!</a></button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Tu Idea Hecha Realidad</p>
+</footer>
+{% endblock %}
+</body>
+</html>

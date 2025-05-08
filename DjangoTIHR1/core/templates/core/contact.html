@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} | ¡Oferta Exclusiva!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+{% block header %}
+
+    <header>
+        <h1>¡Gangazos!</h1>
+        <p class="subtitulo">Descuento especial por tiempo limitado.</p>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}">Sobre los Gangazos</a></li>
+                <li><a href="{% url 'portafolio' %}">Categorias en oferta</a></li>
+                <li><a href="{% url 'contact' %}">Contactenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+{% endblock %}
+
+{% block footer %}
+<section>
+    <div>
+        <h1>contactenos</h1>
+        <main class="container mx-auto py-8">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">Formulario de Contacto</h2>
+                <form action="#" method="post" class="space-y-4">
+                    <div>
+                        <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Tu Nombre">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Tu Email">
+                    </div>
+                    <div>
+                        <label for="mensaje" class="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-y" placeholder="Tu Mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">Enviar Mensaje</button>
+                </form>
+                <div class="mt-6 text-center text-gray-600">
+                    <p>También puedes contactarnos por teléfono al: +57 321 289 2950</p>
+                    <p>O visitarnos en nuestra oficina en: Sena Centro de Industria y Construcción</p>
+                    <p>Carrera: 50B sur N° 143C 06, Ibague-tolima, Colombia</p>
+                </div>
+            </div>
+        </main>
+
+        
+
+    </div>
+</section>
+<section>
+    <div>
+        <h2>¡Actúa ahora!</h2>
+        <p>La oferta termina pronto. ¡No esperes más!</p>
+        <button><a href="{% url 'portafolio' %}">¡Gangazos!</a></button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Tu Idea Hecha Realidad</p>
+</footer>
+{% endblock %}
+</body>
+</html>

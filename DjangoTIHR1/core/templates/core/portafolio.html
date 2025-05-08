@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} | ¡Oferta Exclusiva!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    {% block content %}{% endblock %}
+    
+{% block header %}
+
+    <header>
+        <h1>¡Gangazos!</h1>
+        <p class="subtitulo">Descuento especial por tiempo limitado.</p>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}">Sobre los Gangazos</a></li>
+                <li><a href="{% url 'portafolio' %}">Categorias en oferta</a></li>
+                <li><a href="{% url 'contact' %}">Contactenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+{% endblock %}
+
+<section>
+    <div>
+        <h1>Gangazos de categorías</h1>
+        <main class="container mx-auto py-8">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">Categorias en oferta</h2>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">Gangazos de carpintería</h3>
+                                <p class="text-gray-600">Mesas</p>
+
+                            </div>
+                        </div>
+                    </div>
+                        <img src="{% static 'core/img/Mesa.jpeg' %}" alt="Gangazos de carpinteria">
+                    <p>Ya no esta a $170.000, ahora esta a $155.000</p>
+                        <img src="{% static 'core/img/Mesa 2.jpeg' %}" alt="Gangazos de carpinteria">
+                    <p>Ya no esta a $190.000, ahora esta a $172.000</p>
+                        <img src="{% static 'core/img/Mesa 3.jpeg' %}" alt="Gangazos de carpinteria">
+                    <p>Ya no esta a $210.000, ahora esta a $189.000</p>
+
+                    <button><a href="#">Conocer más</a></button>
+                </div>
+            </div>
+        </main>
+        <br>
+        <br>
+        <main class="container mx-auto py-8">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">Gangazos de Metaleria</h3>
+                                <p class="text-gray-600">Portones</p>
+
+                            </div>
+                        </div>
+                    </div>
+                        <img src="{% static 'core/img/Porton.jfif' %}" alt="Gangazos de Metaleria">
+                    <p>Ya no esta a $570.000, ahora esta a $455.000</p>
+                        <img src="{% static 'core/img/Porton 2.jfif' %}" alt="Gangazos de Metaleria">
+                    <p>Ya no esta a $490.000, ahora esta a $422.000</p>
+                        <img src="{% static 'core/img/Porton 3.jfif' %}" alt="Gangazos de Metaleria">
+                    <p>Ya no esta a $610.000, ahora esta a $589.000</p>
+
+                    <button><a href="#">Conocer más</a></button>
+
+                </div>
+            </div>
+        </main>
+        <br>
+        <br>
+        <main class="container mx-auto py-8">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">Categorias en oferta</h2>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">Gangazos de Vidrieria</h3>
+                                <p class="text-gray-600">Espejos</p>
+
+                            </div>
+                        </div>
+                    </div>
+                        <img src="{% static 'core/img/Espejo.jfif' %}" alt="Gangazos de Vidrieria">
+                    <p>Ya no esta a $270.000, ahora esta a $225.000</p>
+                        <img src="{% static 'core/img/Espejo 2.jfif' %}" alt="Gangazos de Vidrieria">
+                    <p>Ya no esta a $290.000, ahora esta a $242.000</p>
+                        <img src="{% static 'core/img/Espejos 3.jfif' %}" alt="Gangazos de Vidrieria">
+                    <p>Ya no esta a $210.000, ahora esta a $189.000</p>
+
+                    <button><a href="#">Conocer más</a></button>
+                </div>
+            </div>
+        </main>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2025 Tu Idea Hecha Realidad</p>
+    </footer>
+    </body>
+</html>

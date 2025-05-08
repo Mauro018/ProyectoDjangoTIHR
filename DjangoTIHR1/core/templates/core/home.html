@@ -22,6 +22,7 @@
                 <li><a href="{% url 'about' %}">Sobre los Gangazos</a></li>
                 <li><a href="{% url 'portafolio' %}">Categorias en oferta</a></li>
                 <li><a href="{% url 'contact' %}">Contactenos</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
             </ul>
         </nav>
     </header>
@@ -48,6 +49,8 @@
         <div>
             <h2>¡Actúa ahora!</h2>
             <p>La oferta termina pronto. ¡No esperes más!</p>
+            <img src="{% static 'core/img/Descuento.jfif' %}" alt="Descuentos" height="200px" weight="200px">
+            <br>
             <button><a href="{% url 'portafolio' %}">¡Gangazos!</a></button>
         </div>
     </section>
