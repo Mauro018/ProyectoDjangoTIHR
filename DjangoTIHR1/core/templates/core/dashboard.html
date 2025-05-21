@@ -18,8 +18,12 @@
         <p class="subtitulo">Descuento especial por tiempo limitado.</p>
         <nav>
             <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+                <li><a href="{% url 'dashboard' %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}">Sobre los Gangazos</a></li>
+                <li><a href="{% url 'portafolio' %}">Categorias en oferta</a></li>
+                <li><a href="{% url 'contact' %}">Contactenos</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'logout' %}" class="logout-button">Cerrar Sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -50,9 +54,6 @@
             <br>
             <button><a href="{% url 'portafolio' %}">¡Gangazos!</a></button>
         </div>
-        <br>
-        <br>
-        <p>Para saber mas sobre nuestros productos, registrate o inicia sesión.</p>
     </section>
 
     <footer>
